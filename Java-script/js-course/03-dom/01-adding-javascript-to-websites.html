@@ -1,0 +1,36 @@
+<!-- ============================================================
+     TOPIC: Adding JavaScript to Websites
+     ============================================================
+     There are 3 main ways to add JS to an HTML page:
+       1. Inline (directly in an HTML attribute) - avoid this
+       2. Internal (inside a <script> tag in the HTML file)
+       3. External (a separate .js file linked with <script src="...">) - BEST PRACTICE
+============================================================ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Adding JavaScript to Websites</title>
+</head>
+<body>
+
+  <h1>Adding JavaScript to Websites</h1>
+
+  <!-- 1. INLINE JS (written directly in an attribute) - NOT recommended,
+       mixes HTML and JS together and gets messy fast. -->
+  <button onclick="alert('Inline JS clicked!')">Inline JS Button</button>
+
+  <!-- 2. INTERNAL JS - written directly inside a <script> tag.
+       Good for small demos, but mixes concerns in one file. -->
+  <script>
+    console.log("This is internal JavaScript, running inside the HTML file.");
+  </script>
+
+  <!-- 3. EXTERNAL JS - the recommended approach.
+       Keeps HTML (structure) and JS (behaviour) in separate files.
+       IMPORTANT: place <script> tags at the END of the <body>,
+       so the HTML elements exist before the JS tries to use them. -->
+  <script src="./01-adding-javascript-to-websites.js"></script>
+
+</body>
+</html>
